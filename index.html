@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="OPIUM Restaurant — Home of Ambiance. An unparalleled fine dining and social experience."/>
+  <title>OPIUM — Home of Ambiance</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
+
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+  <!-- ═══ CURSOR ═══ -->
+  <div class="custom-cursor" id="cursor"></div>
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+
+  <!-- ═══ LOADER ═══ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <img src="images/logo.jpg" alt="OPIUM" class="loader-logo-img"/>
+      <div class="loader-tagline">Home of Ambiance</div>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" id="nav">
+    <div class="nav-logo">
+      <img src="images/logo.jpg" alt="OPIUM — Home of Ambiance" class="nav-logo-img"/>
+    </div>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">Our Story</a>
+      <a href="#menu" class="nav-link">Menu</a>
+      <a href="#events" class="nav-link">Events</a>
+      <a href="#gallery" class="nav-link">Gallery</a>
+      <a href="#private" class="nav-link">Private Dining</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="#reservations" class="nav-reserve btn-gold">Reserve a Table</a>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-menu-close" id="mobileClose">&#10005;</button>
+    <nav class="mobile-nav">
+      <a href="#about" class="mobile-nav-link">Our Story</a>
+      <a href="#menu" class="mobile-nav-link">Menu</a>
+      <a href="#events" class="mobile-nav-link">Events</a>
+      <a href="#gallery" class="mobile-nav-link">Gallery</a>
+      <a href="#private" class="mobile-nav-link">Private Dining</a>
+      <a href="#contact" class="mobile-nav-link">Contact</a>
+      <a href="#reservations" class="mobile-nav-link gold">Reserve a Table</a>
+    </nav>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-video-overlay"></div>
+      <!-- Ambient animated background (no external video needed) -->
+      <div class="hero-ambient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="orb orb-4"></div>
+        <div class="particle-field" id="particleField"></div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-reveal>Est. in Luxury</div>
+      <h1 class="hero-title" data-reveal>
+        <span class="hero-title-line">Where Every</span>
+        <span class="hero-title-line italic">Moment</span>
+        <span class="hero-title-line">Becomes</span>
+        <span class="hero-title-line italic gold-text">Ambiance.</span>
+      </h1>
+      <p class="hero-sub" data-reveal>Fine Dining · Craft Cocktails · Live Entertainment</p>
+      <div class="hero-ctas" data-reveal>
+        <a href="#reservations" class="btn btn-gold">Reserve Your Experience</a>
+        <a href="#menu" class="btn btn-outline">Explore the Menu</a>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-inner">
+        <span>Home of</span>
+        <span class="badge-big">Ambiance</span>
+        <span>★ ★ ★</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MARQUEE ═══ -->
+  <div class="marquee-section">
+    <div class="marquee-track">
+      <span>Fine Dining</span><span class="sep">✦</span>
+      <span>Craft Cocktails</span><span class="sep">✦</span>
+      <span>Live Entertainment</span><span class="sep">✦</span>
+      <span>Private Events</span><span class="sep">✦</span>
+      <span>Exclusive Atmosphere</span><span class="sep">✦</span>
+      <span>Home of Ambiance</span><span class="sep">✦</span>
+      <span>Fine Dining</span><span class="sep">✦</span>
+      <span>Craft Cocktails</span><span class="sep">✦</span>
+      <span>Live Entertainment</span><span class="sep">✦</span>
+      <span>Private Events</span><span class="sep">✦</span>
+      <span>Exclusive Atmosphere</span><span class="sep">✦</span>
+      <span>Home of Ambiance</span><span class="sep">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="about section-pad" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual">
+          <div class="about-img-frame">
+            <div class="about-img-placeholder">
+              <div class="img-decor-circle"></div>
+              <div class="img-scene">
+                <div class="scene-light"></div>
+                <div class="scene-table">
+                  <div class="scene-plate"></div>
+                  <div class="scene-glass"></div>
+                  <div class="scene-candle"><div class="flame"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="about-img-accent"></div>
+          </div>
+          <div class="about-stat-card">
+            <div class="stat-number">10+</div>
+            <div class="stat-label">Years of Ambiance</div>
+          </div>
+        </div>
+        <div class="about-text">
+          <div class="section-label">Our Story</div>
+          <h2 class="section-title">More Than a Restaurant. <em>An Experience.</em></h2>
+          <p class="body-text">OPIUM was born from a singular passion — the belief that great food, great drinks, and great people deserve a space worthy of the moment. Nestled in the heart of Soshanguve, we've created something the community deserves: a venue where every visit feels like a special occasion.</p>
+          <p class="body-text">From sizzling grills and crafted cocktails to live music and vibrant social evenings — OPIUM is where Soshanguve comes alive. This is not simply a place to eat — it is a place to <em>feel</em>.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🍽</div>
+              <div class="pillar-label">Culinary Excellence</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🎵</div>
+              <div class="pillar-label">Live Entertainment</div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🍸</div>
+              <div class="pillar-label">Artisan Cocktails</div>
+            </div>
+          </div>
+          <a href="#reservations" class="btn btn-gold">Join Us Tonight</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MENU ═══ -->
+  <section class="menu-section section-pad" id="menu">
+    <div class="menu-bg-pattern"></div>
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">Culinary Offerings</div>
+        <h2 class="section-title">The OPIUM <em>Table</em></h2>
+        <p class="section-desc">Freshly prepared with quality ingredients — from sizzling grills to signature cocktails.</p>
+        <div class="menu-board-link">
+          <a href="menu-board.jpg" target="_blank" class="btn btn-outline">
+            📋 View Full Menu Board
+          </a>
+        </div>
+      </div>
+
+      <!-- Menu Tabs -->
+      <div class="menu-tabs">
+        <button class="tab-btn active" data-tab="starters">Starters</button>
+        <button class="tab-btn" data-tab="mains">Mains &amp; Grills</button>
+        <button class="tab-btn" data-tab="burgers">Burgers &amp; Wraps</button>
+        <button class="tab-btn" data-tab="kiddies">Kiddies Meal</button>
+        <button class="tab-btn" data-tab="cocktails">Cocktails</button>
+      </div>
+
+      <!-- Starters -->
+      <div class="menu-panel active" id="tab-starters">
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Starters</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Chicken Wings</div>
+                <div class="menu-item-desc">Crispy wings served with your choice of sauce</div>
+              </div>
+              <div class="menu-item-price">R 80</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Cheese Balls</div>
+                <div class="menu-item-desc">Golden fried cheese balls, served with dipping sauce</div>
+              </div>
+              <div class="menu-item-price">R 60</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Spring Rolls</div>
+                <div class="menu-item-desc">Crispy spring rolls with savoury filling, sweet chilli sauce</div>
+              </div>
+              <div class="menu-item-price">R 65</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Calamari</div>
+                <div class="menu-item-desc">Lightly battered calamari rings, tartare sauce &amp; lemon</div>
+              </div>
+              <div class="menu-item-price">R 80</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Chips</div>
+                <div class="menu-item-desc">Seasoned crispy chips — plain, spiced or loaded</div>
+              </div>
+              <div class="menu-item-price">R 40</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Platters</h3>
+          <div class="menu-items">
+            <div class="menu-item featured-item" data-hover>
+              <div class="menu-item-badge">Best for Groups</div>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Mixed Platter (For 2 People)</div>
+                <div class="menu-item-desc">Wings, spring rolls, calamari, cheese balls &amp; chips</div>
+              </div>
+              <div class="menu-item-price">R 200</div>
+            </div>
+            <div class="menu-item featured-item" data-hover>
+              <div class="menu-item-badge">Party Platter</div>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Mega Platter (For 4 People)</div>
+                <div class="menu-item-desc">Double portions of everything — the ultimate sharing spread</div>
+              </div>
+              <div class="menu-item-price">R 380</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mains & Grills -->
+      <div class="menu-panel" id="tab-mains">
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Grills</h3>
+          <div class="menu-items">
+            <div class="menu-item featured-item" data-hover>
+              <div class="menu-item-badge">House Favourite</div>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Opium Grilled Chicken</div>
+                <div class="menu-item-desc">Full / half flame-grilled chicken, peri-peri or BBQ, served with chips &amp; salad</div>
+              </div>
+              <div class="menu-item-price">R 120</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Grilled Pork Ribs</div>
+                <div class="menu-item-desc">Slow-cooked baby back ribs, smoky BBQ glaze, coleslaw &amp; chips</div>
+              </div>
+              <div class="menu-item-price">R 160</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Steak &amp; Chips</div>
+                <div class="menu-item-desc">Grilled rump / sirloin steak, mushroom or pepper sauce, chips &amp; salad</div>
+              </div>
+              <div class="menu-item-price">R 150</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Grilled Fish</div>
+                <div class="menu-item-desc">Lemon herb grilled fish fillet, chips &amp; seasonal vegetables</div>
+              </div>
+              <div class="menu-item-price">R 130</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Sunday Breakfast</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Full English Breakfast</div>
+                <div class="menu-item-desc">Eggs, bacon, sausage, toast, baked beans, tomato &amp; mushroom</div>
+              </div>
+              <div class="menu-item-price">R 90</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Opium Breakfast Platter</div>
+                <div class="menu-item-desc">Full English plus waffles / pancakes with syrup</div>
+              </div>
+              <div class="menu-item-price">R 120</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Burgers & Wraps -->
+      <div class="menu-panel" id="tab-burgers">
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Burgers</h3>
+          <div class="menu-items">
+            <div class="menu-item featured-item" data-hover>
+              <div class="menu-item-badge">Signature</div>
+              <div class="menu-item-info">
+                <div class="menu-item-name">The Opium Burger</div>
+                <div class="menu-item-desc">Double beef patty, cheddar, caramelised onion, lettuce, tomato, house sauce &amp; chips</div>
+              </div>
+              <div class="menu-item-price">R 120</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Chicken Burger</div>
+                <div class="menu-item-desc">Grilled / crispy chicken breast, coleslaw, pickles, mayo &amp; chips</div>
+              </div>
+              <div class="menu-item-price">R 100</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Veggie Burger</div>
+                <div class="menu-item-desc">Spiced bean patty, avocado, rocket, tomato &amp; sweet chilli</div>
+              </div>
+              <div class="menu-item-price">R 90</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Wraps</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Chicken Wrap</div>
+                <div class="menu-item-desc">Grilled chicken strips, lettuce, cucumber, cheese, sweet chilli sauce</div>
+              </div>
+              <div class="menu-item-price">R 90</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Steak Wrap</div>
+                <div class="menu-item-desc">Sliced steak strips, peppers, onion, cheese, mushroom sauce</div>
+              </div>
+              <div class="menu-item-price">R 110</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kiddies Meal -->
+      <div class="menu-panel" id="tab-kiddies">
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Kiddies Meal</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Chicken Nuggets &amp; Chips</div>
+                <div class="menu-item-desc">6 crispy nuggets with chips &amp; dipping sauce</div>
+              </div>
+              <div class="menu-item-price">R 60</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Mini Burger &amp; Chips</div>
+                <div class="menu-item-desc">Small beef burger with chips &amp; juice</div>
+              </div>
+              <div class="menu-item-price">R 65</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Hotdog &amp; Chips</div>
+                <div class="menu-item-desc">Classic hotdog, tomato sauce &amp; mustard, chips</div>
+              </div>
+              <div class="menu-item-price">R 55</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Chicken Wings &amp; Chips</div>
+                <div class="menu-item-desc">4 wings with chips &amp; juice box</div>
+              </div>
+              <div class="menu-item-price">R 65</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cocktails -->
+      <div class="menu-panel" id="tab-cocktails">
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Signature Cocktails</h3>
+          <div class="menu-items">
+            <div class="menu-item featured-item" data-hover>
+              <div class="menu-item-badge">Signature</div>
+              <div class="menu-item-info">
+                <div class="menu-item-name">The Opium Dream</div>
+                <div class="menu-item-desc">Gin, elderflower, cucumber, citrus, edible glitter</div>
+              </div>
+              <div class="menu-item-price">R 95</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Strawberry Daiquiri</div>
+                <div class="menu-item-desc">White rum, fresh strawberries, lime juice, sugar syrup</div>
+              </div>
+              <div class="menu-item-price">R 85</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Passion Mojito</div>
+                <div class="menu-item-desc">Rum, passionfruit, mint, lime, soda water</div>
+              </div>
+              <div class="menu-item-price">R 85</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Tequila Sunrise</div>
+                <div class="menu-item-desc">Tequila, orange juice, grenadine, ice</div>
+              </div>
+              <div class="menu-item-price">R 80</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Sex on the Beach</div>
+                <div class="menu-item-desc">Vodka, peach schnapps, orange &amp; cranberry juice</div>
+              </div>
+              <div class="menu-item-price">R 80</div>
+            </div>
+          </div>
+        </div>
+        <div class="menu-category">
+          <h3 class="menu-cat-title">Shooters</h3>
+          <div class="menu-items">
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Blowjob</div>
+                <div class="menu-item-desc">Baileys, whipped cream</div>
+              </div>
+              <div class="menu-item-price">R 35</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Springbok</div>
+                <div class="menu-item-desc">Peppermint schnapps &amp; Amarula layered</div>
+              </div>
+              <div class="menu-item-price">R 35</div>
+            </div>
+            <div class="menu-item" data-hover>
+              <div class="menu-item-info">
+                <div class="menu-item-name">Tequila Shooter</div>
+                <div class="menu-item-desc">Tequila, salt &amp; lemon — the classic</div>
+              </div>
+              <div class="menu-item-price">R 30</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RESERVATIONS ═══ -->
+  <section class="reservations section-pad" id="reservations">
+    <div class="res-overlay"></div>
+    <div class="res-ambient">
+      <div class="res-orb res-orb-1"></div>
+      <div class="res-orb res-orb-2"></div>
+    </div>
+    <div class="container">
+      <div class="res-inner">
+        <div class="res-text">
+          <div class="section-label">Book Your Table</div>
+          <h2 class="section-title">Reserve Your <em>Evening</em></h2>
+          <p class="body-text">Secure your place at OPIUM. We recommend reservations to ensure the finest experience — walk-ins are welcome based on availability. Call or WhatsApp us to book.</p>
+          <div class="res-info-list">
+            <div class="res-info-item">
+              <span class="res-info-icon">📍</span>
+              <div>
+                <div class="res-info-title">Location</div>
+                <div class="res-info-val">282/4 Block AA Soshanguve, Pretoria</div>
+              </div>
+            </div>
+            <div class="res-info-item">
+              <span class="res-info-icon">🕕</span>
+              <div>
+                <div class="res-info-title">Service Hours</div>
+                <div class="res-info-val">Tue – Sun: 6:00 PM onwards · Sun Breakfast from 10AM</div>
+              </div>
+            </div>
+            <div class="res-info-item">
+              <span class="res-info-icon">🎵</span>
+              <div>
+                <div class="res-info-title">Live Entertainment</div>
+                <div class="res-info-val">Friday &amp; Saturday from 8:00 PM</div>
+              </div>
+            </div>
+            <div class="res-info-item">
+              <span class="res-info-icon">📞</span>
+              <div>
+                <div class="res-info-title">Call / WhatsApp</div>
+                <div class="res-info-val">082 392 8896 &nbsp;|&nbsp; +27 82 392 8896</div>
+              </div>
+            </div>
+            <div class="res-info-item">
+              <span class="res-info-icon">✉️</span>
+              <div>
+                <div class="res-info-title">Email</div>
+                <div class="res-info-val">Opium12tm@gmail.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="res-form-wrap">
+          <form class="res-form" id="reservationForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Your name" required/>
+              </div>
+              <div class="form-group">
+                <label>Email</label>
+                <input type="email" placeholder="your@email.com" required/>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Date</label>
+                <input type="date" required/>
+              </div>
+              <div class="form-group">
+                <label>Time</label>
+                <select required>
+                  <option value="" disabled selected>Select time</option>
+                  <option>18:00</option>
+                  <option>18:30</option>
+                  <option>19:00</option>
+                  <option>19:30</option>
+                  <option>20:00</option>
+                  <option>20:30</option>
+                  <option>21:00</option>
+                  <option>21:30</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Guests</label>
+                <select required>
+                  <option value="" disabled selected>Number of guests</option>
+                  <option>1 Guest</option>
+                  <option>2 Guests</option>
+                  <option>3 Guests</option>
+                  <option>4 Guests</option>
+                  <option>5 Guests</option>
+                  <option>6 Guests</option>
+                  <option>7–10 Guests</option>
+                  <option>10+ Guests (Private)</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Occasion</label>
+                <select>
+                  <option value="" disabled selected>Special occasion?</option>
+                  <option>None</option>
+                  <option>Birthday</option>
+                  <option>Anniversary</option>
+                  <option>Business Dinner</option>
+                  <option>Proposal</option>
+                  <option>Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group full">
+              <label>Special Requests</label>
+              <textarea placeholder="Dietary requirements, allergies, table preferences…" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold full-width">Confirm Reservation</button>
+            <div class="form-note">Our team will confirm your booking within 2 hours.</div>
+          </form>
+          <div class="res-success" id="resSuccess">
+            <div class="success-icon">✦</div>
+            <h3>Reservation Received</h3>
+            <p>We look forward to welcoming you to OPIUM. A confirmation will be sent to your email shortly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EVENTS ═══ -->
+  <section class="events section-pad" id="events">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">Upcoming</div>
+        <h2 class="section-title">Evenings at <em>OPIUM</em></h2>
+        <p class="section-desc">From jazz sessions to exclusive DJ nights — there's always something extraordinary happening.</p>
+      </div>
+      <div class="events-grid">
+        <div class="event-card featured-event">
+          <div class="event-card-date">
+            <span class="event-month">APR</span>
+            <span class="event-day">05</span>
+          </div>
+          <div class="event-card-body">
+            <div class="event-tag">Live Music</div>
+            <h3 class="event-title">Jazz &amp; Champagne Evening</h3>
+            <p class="event-desc">An intimate evening with acclaimed saxophonist Marcus Dlamini, paired with a curated champagne flight.</p>
+            <div class="event-meta">
+              <span>🕗 7:00 PM</span>
+              <span>🎟 R 350 per person</span>
+            </div>
+            <a href="#reservations" class="btn btn-gold sm">Book Seats</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-date">
+            <span class="event-month">APR</span>
+            <span class="event-day">12</span>
+          </div>
+          <div class="event-card-body">
+            <div class="event-tag">DJ Night</div>
+            <h3 class="event-title">Noir Fridays</h3>
+            <p class="event-desc">Deep house, afro-soul, and world-class mixology. The ultimate Friday night ritual.</p>
+            <div class="event-meta">
+              <span>🕗 8:00 PM</span>
+              <span>🎟 R 200 cover</span>
+            </div>
+            <a href="#reservations" class="btn btn-outline sm">Reserve</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-date">
+            <span class="event-month">APR</span>
+            <span class="event-day">19</span>
+          </div>
+          <div class="event-card-body">
+            <div class="event-tag">Exclusive</div>
+            <h3 class="event-title">Chef's Table: Fire &amp; Smoke</h3>
+            <p class="event-desc">A 7-course theatrical tasting menu centered around open-flame cooking techniques. Limited to 12 guests.</p>
+            <div class="event-meta">
+              <span>🕗 7:30 PM</span>
+              <span>🎟 R 1 200 pp</span>
+            </div>
+            <a href="#reservations" class="btn btn-outline sm">Reserve</a>
+          </div>
+        </div>
+        <div class="event-card">
+          <div class="event-card-date">
+            <span class="event-month">APR</span>
+            <span class="event-day">26</span>
+          </div>
+          <div class="event-card-body">
+            <div class="event-tag">Social</div>
+            <h3 class="event-title">Sunset Rooftop Hour</h3>
+            <p class="event-desc">Signature cocktails, light bites, and golden-hour views. Sophisticated socialising at its finest.</p>
+            <div class="event-meta">
+              <span>🕔 5:00 PM</span>
+              <span>🎟 Complimentary</span>
+            </div>
+            <a href="#reservations" class="btn btn-outline sm">Reserve</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ GALLERY ═══ -->
+  <section class="gallery-section section-pad" id="gallery">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">Visual Journey</div>
+        <h2 class="section-title">The <em>Atmosphere</em></h2>
+      </div>
+      <div class="gallery-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="dining">Dining Room</button>
+        <button class="filter-btn" data-filter="bar">The Bar</button>
+        <button class="filter-btn" data-filter="food">Culinary</button>
+        <button class="filter-btn" data-filter="events">Events</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Gallery items with CSS-art placeholders -->
+        <div class="gallery-item large" data-category="dining">
+          <div class="gallery-img dining-1"><div class="gallery-overlay"><span>The Main Room</span></div></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <div class="gallery-img food-1"><div class="gallery-overlay"><span>Wagyu Tartare</span></div></div>
+        </div>
+        <div class="gallery-item" data-category="bar">
+          <div class="gallery-img bar-1"><div class="gallery-overlay"><span>The Bar</span></div></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <div class="gallery-img event-1"><div class="gallery-overlay"><span>Jazz Evening</span></div></div>
+        </div>
+        <div class="gallery-item" data-category="food">
+          <div class="gallery-img food-2"><div class="gallery-overlay"><span>Opium Dream</span></div></div>
+        </div>
+        <div class="gallery-item tall" data-category="dining">
+          <div class="gallery-img dining-2"><div class="gallery-overlay"><span>Private Room</span></div></div>
+        </div>
+        <div class="gallery-item" data-category="bar">
+          <div class="gallery-img bar-2"><div class="gallery-overlay"><span>Cocktail Craft</span></div></div>
+        </div>
+        <div class="gallery-item" data-category="events">
+          <div class="gallery-img event-2"><div class="gallery-overlay"><span>Noir Fridays</span></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRIVATE DINING ═══ -->
+  <section class="private section-pad" id="private">
+    <div class="private-bg"></div>
+    <div class="container">
+      <div class="private-grid">
+        <div class="private-text">
+          <div class="section-label">Exclusive Spaces</div>
+          <h2 class="section-title">Private Dining &amp; <em>Events</em></h2>
+          <p class="body-text">Whether you're celebrating a milestone, hosting a corporate dinner, or planning something truly unforgettable — OPIUM's private spaces offer unrivalled intimacy and service.</p>
+          <div class="private-features">
+            <div class="private-feature">
+              <div class="pf-num">01</div>
+              <div>
+                <div class="pf-title">The Cellar Room</div>
+                <div class="pf-desc">Intimate dining for 8–20 guests surrounded by our curated wine collection.</div>
+              </div>
+            </div>
+            <div class="private-feature">
+              <div class="pf-num">02</div>
+              <div>
+                <div class="pf-title">The Gallery Lounge</div>
+                <div class="pf-desc">Semi-private space for 20–50 guests with full AV capabilities and bespoke menus.</div>
+              </div>
+            </div>
+            <div class="private-feature">
+              <div class="pf-num">03</div>
+              <div>
+                <div class="pf-title">Full Venue Buyout</div>
+                <div class="pf-desc">Transform OPIUM entirely for events up to 200 guests. Complete creative control.</div>
+              </div>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-gold">Enquire Now</a>
+        </div>
+        <div class="private-visual">
+          <div class="private-card-stack">
+            <div class="pcard pcard-1">
+              <div class="pcard-inner">
+                <div class="pcard-icon">🥂</div>
+                <div class="pcard-title">Champagne on Arrival</div>
+              </div>
+            </div>
+            <div class="pcard pcard-2">
+              <div class="pcard-inner">
+                <div class="pcard-icon">🍽</div>
+                <div class="pcard-title">Bespoke Menus</div>
+              </div>
+            </div>
+            <div class="pcard pcard-3">
+              <div class="pcard-inner">
+                <div class="pcard-icon">🎶</div>
+                <div class="pcard-title">Live Music Available</div>
+              </div>
+            </div>
+            <div class="pcard pcard-4">
+              <div class="pcard-inner">
+                <div class="pcard-icon">🎨</div>
+                <div class="pcard-title">Custom Décor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="testimonials section-pad">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">Voices</div>
+        <h2 class="section-title">What Guests <em>Say</em></h2>
+      </div>
+      <div class="testimonial-carousel" id="testimonialCarousel">
+        <div class="testimonial-track" id="testimonialTrack">
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"OPIUM is not just dinner — it's an event. From the moment you walk in, every sense is engaged. The food, the ambiance, the cocktails — perfection in every detail."</p>
+            <div class="testimonial-author">— Lerato M., Johannesburg</div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"We celebrated our anniversary here and it was extraordinary. The private table, the personalised menu, the service — it felt like the restaurant was made just for us."</p>
+            <div class="testimonial-author">— James &amp; Priya K., Cape Town</div>
+          </div>
+          <div class="testimonial-slide">
+            <div class="testimonial-stars">★★★★★</div>
+            <p class="testimonial-text">"The cocktails alone are worth the visit. But combined with that atmosphere and live music on a Friday night? OPIUM has no equal in this city."</p>
+            <div class="testimonial-author">— Sipho T., Sandton</div>
+          </div>
+        </div>
+        <div class="testimonial-dots">
+          <span class="t-dot active" data-slide="0"></span>
+          <span class="t-dot" data-slide="1"></span>
+          <span class="t-dot" data-slide="2"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT ═══ -->
+  <section class="contact section-pad" id="contact">
+    <div class="container">
+      <div class="section-header centered">
+        <div class="section-label">Find Us</div>
+        <h2 class="section-title">Come <em>Experience</em> Us</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-detail">
+            <div class="cd-icon">📍</div>
+            <div>
+              <div class="cd-title">Location</div>
+              <div class="cd-val">282/4 Block AA Soshanguve<br/>Soshanguve, Pretoria<br/>South Africa</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">⏱</div>
+            <div>
+              <div class="cd-title">Hours</div>
+              <div class="cd-val">
+                Tuesday – Thursday: 6PM – 10:30PM<br/>
+                Friday – Saturday: 6PM – 12AM<br/>
+                Sunday: 12PM – 9PM<br/>
+                Monday: Closed
+              </div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="cd-icon">📞</div>
+            <div>
+              <div class="cd-title">Reservations</div>
+              <div class="cd-val">
+                <a href="tel:0658473594">065 847 3594</a><br/>
+                <a href="tel:+0658473594">+27 65 847 3594</a><br/>
+                <a href="mailto:Opium12tm@gmail.com">Opium12tm@gmail.com</a>
+              </div>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="https://www.facebook.com/opium1238" target="_blank" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">TikTok</a>
+          </div>
+        </div>
+        <div class="contact-map">
+          <a href="https://maps.google.com/?q=282+Block+AA+Soshanguve+Pretoria+South+Africa" target="_blank" class="map-placeholder map-clickable">
+            <div class="map-pin">
+              <div class="pin-icon">✦</div>
+              <div class="pin-label">OPIUM — Soshanguve</div>
+              <div class="pin-sub">Click for directions</div>
+            </div>
+            <div class="map-grid-lines"></div>
+            <div class="map-address-tag">282/4 Block AA Soshanguve, Pretoria</div>
+          </a>
+        </div>
+        <div class="contact-form-wrap">
+          <h3 class="contact-form-title">Send a Message</h3>
+          <form class="contact-form">
+            <div class="form-group">
+              <label>Name</label>
+              <input type="text" placeholder="Your name"/>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" placeholder="your@email.com"/>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" placeholder="How can we help?"/>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea rows="4" placeholder="Your message…"></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold full-width">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <img src="images/logo.jpg" alt="OPIUM — Home of Ambiance" class="footer-logo-img"/>
+      <div class="footer-tagline">Home of Ambiance · Soshanguve, Pretoria</div>
+    </div>
+    <div class="footer-links">
+      <a href="#about">Our Story</a>
+      <a href="#menu">Menu</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#private">Private Dining</a>
+      <a href="#reservations">Reservations</a>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 OPIUM Restaurant — Home of Ambiance. All rights reserved. | 282/4 Block AA Soshanguve | 082 392 8896</div>
+      <div class="footer-legal">
+        <a href="#">Privacy Policy</a>
+           <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══ WHATSAPP FLOAT ═══ -->
+  <a href="https://wa.me/27658473594" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.985-1.406A9.953 9.953 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm.001 18.198c-1.63 0-3.14-.453-4.43-1.237l-.316-.188-3.28.925.957-3.18-.207-.33A8.197 8.197 0 0 1 3.8 12c0-4.52 3.68-8.199 8.202-8.199 4.52 0 8.197 3.68 8.197 8.2 0 4.52-3.677 8.197-8.198 8.197zm4.518-6.14c-.247-.124-1.463-.722-1.69-.803-.226-.082-.39-.124-.555.124-.165.247-.638.803-.783.968-.144.165-.288.186-.535.062-.247-.124-1.043-.384-1.986-1.225-.734-.654-1.23-1.462-1.374-1.709-.144-.247-.015-.38.108-.503.111-.11.247-.288.37-.432.124-.144.165-.247.247-.412.082-.165.041-.309-.021-.432-.062-.124-.555-1.34-.76-1.834-.2-.48-.404-.415-.555-.423l-.473-.008c-.165 0-.432.062-.658.309-.226.247-.863.843-.863 2.056s.884 2.386 1.007 2.55c.124.165 1.74 2.656 4.215 3.727.59.254 1.05.406 1.408.52.591.188 1.129.161 1.554.098.474-.07 1.463-.598 1.669-1.176.206-.577.206-1.072.144-1.176-.062-.103-.226-.165-.473-.288z"/>
+    </svg>
+    <span>WhatsApp Us</span>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+</html>
